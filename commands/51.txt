@@ -1,0 +1,9 @@
+mysql> SELECT DISTINCT city FROM student;
++---------------+
+| city          |
++---------------+
+| Mumbai        |
+| Delhi         |
+| Not Specified |
++---------------+
+3 rows in set (0.00 sec)

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+    .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .contact-info img {
+            width: 40%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-details {
+            width: 55%;
+        }
+
+        .contact-details h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin-top: 30px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        .contact-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #3b5998;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #687cab;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="./index.html">H O M E</a>
+        </div>
+        <div class="navbar">
+            <a href="./UNIT 1.html">DBMS</a>
+            <a href="./UNIT 2.html">RDBMS</a> 
+            <a href="./UNIT 3.html">MY SQL</a>
+            <a href="./UNIT 4.html">PL SQL</a>
+            <a href="./case.html">CASE STUDY</a>
+            <a href="./contact.html">CONTACT</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <div class="contact-details">
+                <h2>Get in Touch</h2>
+                <p>Have a question or want to learn more about DBMS Feel free to reach out to us using the contact form
+                    below. We'll get back to you as soon as possible.</p>
+            </div>
+            <img src="img/dbms.png" alt="Contact Image">
+        </div>
+
+        <div class="contact-form">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

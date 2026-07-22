@@ -1,0 +1,9 @@
+mysql> SELECT * FROM student WHERE age BETWEEN 18 AND 20;
++----+--------+--------+--------+-----+------------+
+| id | name   | gender | city   | age | phone      |
++----+--------+--------+--------+-----+------------+
+|  1 | Riya   | Female | Mumbai |  18 | 9876543210 |
+|  2 | Sneha  | Female | Delhi  |  19 | 9834567890 |
+|  3 | Aman   | Male   | Delhi  |  20 | 9123456789 |
++----+--------+--------+--------+-----+------------+
+3 rows in set (0.00 sec)

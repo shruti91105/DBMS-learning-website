@@ -1,0 +1,2 @@
+UPDATE students_marks 
+SET age_in_days = DATEDIFF(CURDATE(), dob);

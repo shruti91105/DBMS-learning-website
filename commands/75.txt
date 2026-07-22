@@ -1,0 +1,18 @@
+CREATE OR REPLACE TRIGGER trg_students_all_actions
+AFTER INSERT OR UPDATE OR DELETE ON students
+FOR EACH ROW
+BEGIN
+    IF INSERTING THEN
+        INSERT INTO student_audit (action_type, student_id, name, marks, action_date)
+        VALUES ('INSERT', :NEW.student_id, :NEW.name, :NEW.marks, SYSDATE);
+        
+    ELSIF UPDATING THEN
+        INSERT INTO student_audit (action_type, student_id, name, marks, action_date)
+        VALUES ('UPDATE', :NEW.student_id, :NEW.name, :NEW.marks, SYSDATE);
+        
+    ELSIF DELETING THEN
+        INSERT INTO student_audit (action_type, student_id, name, marks, action_date)
+        VALUES ('DELETE', :OLD.student_id, :OLD.name, :OLD.marks, SYSDATE);
+    END IF;
+END;
+/

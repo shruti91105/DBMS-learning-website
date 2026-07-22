@@ -1,0 +1,8 @@
+mysql> SELECT name, city FROM student
+    -> WHERE city = 'Delhi';
++--------+-------+
+| name   | city  |
++--------+-------+
+| Aman   | Delhi |
++--------+-------+
+1 row in set (0.00 sec)

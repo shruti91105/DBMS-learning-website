@@ -1,0 +1,9 @@
+mysql> SELECT name, city FROM student;
++--------+---------------+
+| name   | city          |
++--------+---------------+
+| Riya   | Mumbai        |
+| Aman   | Delhi         |
+| Sneha  | Not Specified |
++--------+---------------+
+3 rows in set (0.00 sec)

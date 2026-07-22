@@ -1,0 +1,12 @@
+mysql> SELECT student.name, subject.subject_name
+    -> FROM student
+    -> CROSS JOIN subject;
++--------+--------------+
+| name   | subject_name |
++--------+--------------+
+| Riya   | Math         |
+| Riya   | Science      |
+| Aman   | Math         |
+| Aman   | Science      |
++--------+--------------+
+4 rows in set (0.00 sec)

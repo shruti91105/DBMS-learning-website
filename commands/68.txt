@@ -1,0 +1,4 @@
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('This is an unnamed procedure.');
+END;
+/

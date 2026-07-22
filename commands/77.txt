@@ -1,0 +1,37 @@
+CREATE TABLE students (
+    student_id NUMBER PRIMARY KEY,
+    name       VARCHAR2(50),
+    marks      NUMBER
+);
+
+-- Package Specification
+CREATE OR REPLACE PACKAGE student_pkg IS
+    -- Global variable
+    g_total_students NUMBER := 0;
+
+    -- Procedures
+    PROCEDURE add_student(p_id NUMBER, p_name VARCHAR2, p_marks NUMBER);
+    PROCEDURE show_total_students;
+END student_pkg;
+/
+
+-- Package Body
+CREATE OR REPLACE PACKAGE BODY student_pkg IS
+
+    -- Procedure to add a student
+    PROCEDURE add_student(p_id NUMBER, p_name VARCHAR2, p_marks NUMBER) IS
+    BEGIN
+        INSERT INTO students (student_id, name, marks)
+        VALUES (p_id, p_name, p_marks);
+
+        g_total_students := g_total_students + 1;
+    END;
+
+    -- Procedure to show total students added
+    PROCEDURE show_total_students IS
+    BEGIN
+        DBMS_OUTPUT.PUT_LINE('Total students added: ' || g_total_students);
+    END;
+
+END student_pkg;
+/

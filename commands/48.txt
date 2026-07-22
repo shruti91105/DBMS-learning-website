@@ -1,0 +1,10 @@
+mysql> SELECT city, COUNT(*) AS total_students
+    -> FROM student
+    -> GROUP BY city
+    -> HAVING COUNT(*) > 1;
++--------+----------------+
+| city   | total_students |
++--------+----------------+
+| Delhi  |        2       |
++--------+----------------+
+1 row in set (0.00 sec)

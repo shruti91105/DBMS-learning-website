@@ -1,0 +1,4 @@
+mysql> CREATE TABLE new_student AS
+    -> SELECT * FROM student;
+output:- Query OK, 14 rows affected (0.01 sec)
+Records: 14  Duplicates: 0  Warnings: 0

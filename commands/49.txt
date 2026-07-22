@@ -1,0 +1,9 @@
+mysql> SELECT name, age FROM student ORDER BY age ASC;
++--------+-----+
+| name   | age |
++--------+-----+
+| Riya   | 18  |
+| Sneha  | 19  |
+| Aman   | 20  |
++--------+-----+
+3 rows in set (0.00 sec)

@@ -1,0 +1,10 @@
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| college            |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+

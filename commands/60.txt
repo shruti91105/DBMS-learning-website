@@ -1,0 +1,13 @@
+CREATE OR REPLACE PROCEDURE insert_student(
+    p_id students.student_id%TYPE,
+    p_name students.student_name%TYPE,
+    p_marks students.marks%TYPE
+)
+IS
+BEGIN
+    INSERT INTO students (student_id, student_name, marks)
+    VALUES (p_id, p_name, p_marks);
+    
+    DBMS_OUTPUT.PUT_LINE('Student inserted successfully.');
+END;
+/

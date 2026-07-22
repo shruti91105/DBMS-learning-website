@@ -1,0 +1,8 @@
+mysql> SELECT gender, COUNT(*) AS total FROM student GROUP BY gender;
++--------+-------+
+| gender | total |
++--------+-------+
+| Male   |   1   |
+| Female |   2   |
++--------+-------+
+2 rows in set (0.00 sec)

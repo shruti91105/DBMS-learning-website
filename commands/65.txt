@@ -1,0 +1,12 @@
+CREATE OR REPLACE PROCEDURE print_numbers
+IS
+    counter NUMBER := 1;
+BEGIN
+    LOOP
+        DBMS_OUTPUT.PUT_LINE('Number: ' || counter);
+        counter := counter + 1;
+        
+        EXIT WHEN counter > 5;
+    END LOOP;
+END;
+/

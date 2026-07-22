@@ -1,0 +1,21 @@
+CREATE OR REPLACE PROCEDURE show_top_students(min_marks IN NUMBER)
+IS
+    CURSOR student_cursor(p_min_marks NUMBER) IS
+        SELECT name, marks FROM students
+        WHERE marks >= p_min_marks;
+
+    v_name  students.name%TYPE;
+    v_marks students.marks%TYPE;
+BEGIN
+    OPEN student_cursor(min_marks);
+
+    LOOP
+        FETCH student_cursor INTO v_name, v_marks;
+        EXIT WHEN student_cursor%NOTFOUND;
+
+        DBMS_OUTPUT.PUT_LINE('Name: ' || v_name || ', Marks: ' || v_marks);
+    END LOOP;
+
+    CLOSE student_cursor;
+END;
+/

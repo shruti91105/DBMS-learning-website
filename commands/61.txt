@@ -1,0 +1,16 @@
+CREATE OR REPLACE PROCEDURE show_student_details(p_id IN students.student_id%TYPE)
+IS
+    student_record students%ROWTYPE;
+BEGIN
+    SELECT * INTO student_record
+    FROM students
+    WHERE student_id = p_id;
+
+    DBMS_OUTPUT.PUT_LINE('Student ID: ' || student_record.student_id);
+    DBMS_OUTPUT.PUT_LINE('Name: ' || student_record.student_name);
+    DBMS_OUTPUT.PUT_LINE('Marks: ' || student_record.marks);
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No student found with ID ' || p_id);
+END;
+/

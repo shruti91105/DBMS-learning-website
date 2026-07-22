@@ -1,0 +1,20 @@
+SELECT sm.subject_name, sm.student_id, sm.student_name, sm.marks, total.total_marks
+FROM students_marks sm
+JOIN (
+    SELECT student_id, SUM(marks) AS total_marks
+    FROM students_marks
+    WHERE is_absent = 0
+    GROUP BY student_id
+) total ON sm.student_id = total.student_id
+WHERE is_absent = 0 AND is_passed = 1
+AND (subject_name, marks) IN (
+    SELECT subject_name, marks
+    FROM (
+        SELECT subject_name, marks,
+               DENSE_RANK() OVER (PARTITION BY subject_name ORDER BY marks DESC) AS rnk
+        FROM students_marks
+        WHERE is_absent = 0 AND is_passed = 1
+    ) ranked
+    WHERE rnk <= 3
+)
+ORDER BY subject_name, marks DESC;

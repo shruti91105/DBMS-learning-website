@@ -1,0 +1,4 @@
+mysql> UPDATE student
+    -> SET department = 'General';
+Query OK, 8 rows affected (0.01 sec)
+Rows matched: 8  Changed: 8  Warnings: 0

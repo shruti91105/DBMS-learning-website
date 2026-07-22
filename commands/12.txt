@@ -1,0 +1,8 @@
+mysql> SHOW TABLES;
++------------------+
+| Tables_in_college |
++------------------+
+| student          |
+| new_student      |
++------------------+
+2 rows in set (0.00 sec)

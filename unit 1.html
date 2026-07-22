@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: left;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .container h4{
+            margin-top: -20px;
+            font-weight: 300;
+        }
+    </style>
+    <title>unit1</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="./index.html">H O M E</a>
+        </div>
+        <div class="navbar">
+            <a href="./UNIT 1.html">DBMS</a>
+            <a href="./UNIT 2.html">RDBMS</a>
+            <a href="./UNIT 3.html">MY SQL</a>
+            <a href="./UNIT 4.html">PL SQL</a>
+            <a href="./case.html">CASE STUDY</a>
+            <a href="./contact.html">CONTACT</a>
+        </div>
+    </nav>
+    <div class="shortcut">
+        <a href="#basics">FILE SYSTEM VS DBMS</a>
+        <a href="#strings">CHARACTERISTICS</a>
+        <a href="#conversion">DATABASE USERS</a>
+        <a href="#functions">ENTITY RELATIONSHIP MODEL</a>
+      </div>
+    <div class="container">
+        <h1 id="basics">A <br> HISTORICAL <br> PERSPECTIVE</h1>
+        <hr>
+        <h2>FILE SYSTEM VS DBMS</h2> 
+        <img src="./img/FILESYSTEM.jpg" height="500"  width="1000">
+        <H2>FILE SYSTEM</H2>
+        <p>The file system is basically a way of arranging the files in a storage medium like a hard disk. The file system organizes the files and helps in the retrieval of files when they are required. File systems consist of different files which are grouped into directories. The directories further contain other folders and files. The file system performs basic operations like management, file naming, giving access rules, etc.</p>
+        <H2>DBMS</H2>     
+        <p>Database Management System is basically software that manages the collection of related data. It is used for storing data and retrieving the data effectively when it is needed. It also provides proper security measures for protecting the data from unauthorized access. In Database Management System the data can be fetched by SQL queries and relational algebra. It also provides mechanisms for data recovery and data backup.</p>
+        <table BORDER="8">
+            <tr>
+              <th>Basics</th>
+              <th>File System</th>
+              <th>DBMS</th>
+            </tr>
+            <tr>
+              <td>Structure</td>
+              <td>The file system is a way of arranging the files in a storage medium within a computer.</td>
+              <td>DBMS is software for managing the database.</td>
+            </tr>
+            <tr>
+              <td>Data Redundancy</td>
+              <td>Redundant data can be present in a file system.</td>
+              <td>In DBMS there is no redundant data.</td>
+            </tr>
+            <tr>
+                <td>Backup and Recovery</td>
+                <td>It doesn’t provide Inbuilt mechanism for backup and recovery of data if it is lost.</td>
+                <td>It provides in house tools for backup and recovery of data even if it is lost.</td>
+              </tr>
+              <tr>
+                <td>Query processing</td>
+                <td>There is no efficient query processing in the file system.</td>
+                <td>Efficient query processing is there in DBMS.</td>
+              </tr>
+              <tr>
+                <td>Consistency</td>
+                <td>There is less data consistency in the file system.</td>
+                <td>There is more data consistency because of the process of normalization</td>
+              </tr>
+              <tr>
+                <td>Data Independence</td>
+                <td>There is no data independence.</td>
+                <td>In DBMS data independence exists, mainly of two types:
+
+                    1) Logical Data Independence .
+                    
+                    2)Physical Data Independence.</td>
+              </tr>
+              <tr>
+                <td>Security Constraints</td>
+                <td>File systems provide less security in comparison to DBMS</td>
+                <td>DBMS has more security mechanisms as compared to file systems.</td>
+              </tr>
+          </table>
+            <h2 ID="strings"><u>DBMS APPROACH</u></h2>
+            <img src="./img/CHARACTER.png" height="400" width="1000">
+            <h3>CHARACTERISTICS OF DBMS APPROACH</h3>
+            <UL>
+                <LI>A database management system is able to store any kind of data in a database.</LI>
+                <LI>The database management system has to support ACID (atomicity, consistency, isolation, durability) properties.</LI>
+                <LI>The Database management system allows so many users to access databases at the same time.</LI>
+                <LI>Backup and recovery are the two main methods which allow users to protect the data from damage or loss.</LI>
+                <LI>It also provides multiple views for different users in a single organization</LI>
+                <LI>It follows the concept of normalization which is helpful to minimize the redundancy of a relation.</LI>
+                <LI>It also provides users query language, helpful to insert, retrieve, update, and delete the data in a database.</LI>
+            </UL>
+            <h2 ID="conversion">DATABASE USERS</h2>
+            <img src="./img/USERS.PNG" height="400" width="1000">
+            <h4>HYBE CEO</h4>
+            <pre>
+ <H3>1. Database Administrator (DBA)</H3>
+A Database Administrator (DBA) is a person/team who defines the schema and also controls the 3 levels of the database. 
+The DBA will then create a new account ID and password for the user if he/she needs to access the database. 
+DBA is also responsible for providing security to the database and he allows only authorized users to access/modify the database.
+ DBA is responsible for problems such as security breaches and poor system response time.
+
+<UL><LI>DBA also monitors the recovery and backup and provides technical support.</LI>
+<LI>The DBA has a DBA account in the DBMS which is called a system or superuser account.</LI>
+<LI>DBA repairs damage caused due to hardware and/or software failures.</LI>
+<LI>DBA is the one having privileges to perform DCL (Data Control Language) operations such as GRANT and REVOKE, to allow/restrict a particular 
+user from accessing the database.</LI></UL><H3>2. Database Designers</H3>
+<P>Data Base Designers are the users who design the structure of database which includes tables, indexes, views, triggers, stored procedures and 
+constraints which are usually enforced before the database is created or populated with data. He/she controls what data must be stored and how 
+the data items to be related.It is the responsibility of Database Designers to understand the requirements of different user groups and then 
+create a design which satisfies the need of all the user groups.</P>
+<H3>3. Application Programmers</H3>
+<P>Application Programmers also referred as System Analysts or simply Software Engineers, are the back-end programmers who writes the code for the
+     application programs. They are the computer professionals. These programs could be written in Programming languages such as Visual Basic, 
+     Developer, C, FORTRAN, COBOL etc. Application programmers design, debug, test, and maintain set of programs called “canned transactions” 
+     for the Naive (parametric) users in order to interact with database.</P>
+</pre>
+            <h2 ID="functions"><u>ENTITY RELATIONSHIP MODEL</u></h>
+                <H3>INTRODUCTION</H3>
+            <P>The Entity Relationship Model is a model for identifying entities (like student, car or company) to be represented in the database and representation of how those entities are related. The ER data model specifies enterprise schema that represents the overall logical structure of a database graphically.</P>  
+            <H3>Why Use ER Diagrams In DBMS</H3>
+            <UL>
+                <LI>ER diagrams represent the E-R model in a database, making them easy to convert into relations (tables).</LI>
+                <LI>ER diagrams serve the purpose of real-world modeling of objects which makes them intently useful.</LI>
+                <LI>ER diagrams require no technical knowledge of the underlying DBMS used.</LI>
+                <LI>It gives a standard solution for visualizing the data logically.</LI>
+            </UL>
+            <H3>Symbols Used in ER Model</H3>
+            <hr>
+            <P>ER Model is used to model the logical view of the system from a data perspective which consists of these symbols:</P>
+            <img src="./img/ERSYMBOLS.webp" height="300" width="700"> 
+            <UL>
+                <LI><B>Rectangles:</B>Rectangles represent entities in the ER Model.</LI>
+                <LI><B>Ellipses:</B>Ellipses represent attributes in the ER Model.</LI>
+                <LI><B>Diamond:</B>Diamonds represent relationships among Entities.</LI>
+                <LI><B>Lines:</B>Lines represent attributes to entities and entity sets with other relationship types.</LI>
+                <LI><B>Double Ellipse:</B>Double ellipses represent multi-valued Attributes.</LI>
+                <LI><B>Double Rectangle:</B>Double rectangle represents a weak entity.</LI>
+            </UL>
+            <h3>SYMBOL</h3>
+            <img src="./img/ERMODEL1.webp">
+            <h3>WORDMARK</h3>
+            <img src="./img/ERMODEL.jpg" height="300" width="600">
+            
+    </div>
+</body>
+
+</html>

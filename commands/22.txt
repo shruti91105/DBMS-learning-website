@@ -1,0 +1,5 @@
+mysql> UPDATE student
+    -> SET department = 'Computer Science'
+    -> WHERE id = 2;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0

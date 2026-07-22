@@ -1,0 +1,186 @@
+/* Color Palette & CSS Variables */
+:root {
+    --bg-primary: #0f172a;       /* Dark slate background */
+    --bg-secondary: #1e293b;     /* Slightly lighter slate for nav/cards */
+    --bg-carousel: #020617;      /* Dark backdrop for images */
+    --accent-blue: #38bdf8;      /* Sky blue accent */
+    --accent-hover: #0284c7;     /* Darker blue hover */
+    --text-primary: #f8fafc;     /* Bright off-white */
+    --text-muted: #94a3b8;       /* Muted grey text */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--bg-secondary);
+    display: flex;
+    height: 70px;   
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    color: var(--accent-blue);
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1rem; 
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent-blue);
+}
+
+/* Section & Carousel Section */
+section {
+    width: 100%;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px; /* Prevents carousel from stretching infinitely */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    background-color: var(--bg-carousel);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slide {
+    min-width: 100%;
+    height: 500px; /* Comfortable max height for most laptop screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-carousel);
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Keeps original aspect ratio without cutoffs */
+    display: block;
+}
+
+/* Navigation Buttons */
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Allows clicks to pass through transparent space */
+    padding: 0 10px;
+}
+
+.prev,
+.next {
+    pointer-events: auto;
+    border: none; 
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    color: var(--text-primary);
+    background-color: rgba(15, 23, 42, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.prev:hover,
+.next:hover { 
+    background-color: var(--accent-blue);
+    color: var(--bg-primary);
+    transform: scale(1.08);
+}
+
+/* Shortcuts & Misc Components */
+.shortcut {
+    padding: 20px;
+    text-align: center;
+}
+
+.shortcut a {
+    color: var(--accent-blue);
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid var(--accent-blue);
+    text-decoration: none;
+    background-color: rgba(56, 189, 248, 0.1);
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.shortcut a:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-primary);
+}
+
+iframe {
+    width: 100%;
+    max-width: 1450px;
+    height: 350px;
+    margin: 20px 0;
+	margin-left: 30px;
+	margin-right: 20px;
+    border: 1px solid var(--bg-secondary);
+    border-radius: 8px;
+}
+
+h5 {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,2 @@
+mysql> DELETE FROM student;
+Query OK, 8 rows affected (0.01 sec)

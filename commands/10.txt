@@ -1,0 +1,7 @@
+mysql> CREATE TABLE student (
+    -> id INT,
+    -> name VARCHAR(100),
+    -> age INT DEFAULT 18,
+    -> department VARCHAR(50) DEFAULT 'Undeclared'
+    -> );
+output:- Query OK, 0 rows affected (0.02 sec)

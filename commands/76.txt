@@ -1,0 +1,17 @@
+CREATE OR REPLACE TRIGGER trg_students_stmt_all
+AFTER INSERT OR UPDATE OR DELETE ON students
+BEGIN
+    IF INSERTING THEN
+        INSERT INTO student_statement_log (action_type, log_time)
+        VALUES ('INSERT', SYSDATE);
+
+    ELSIF UPDATING THEN
+        INSERT INTO student_statement_log (action_type, log_time)
+        VALUES ('UPDATE', SYSDATE);
+
+    ELSIF DELETING THEN
+        INSERT INTO student_statement_log (action_type, log_time)
+        VALUES ('DELETE', SYSDATE);
+    END IF;
+END;
+/

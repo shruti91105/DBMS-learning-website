@@ -1,0 +1,7 @@
+mysql> CREATE TABLE student (
+    -> id INT,
+    -> name VARCHAR(100),
+    -> age INT CHECK (age >= 17),
+    -> department VARCHAR(50)
+    -> );
+output:- Query OK, 0 rows affected (0.01 sec)

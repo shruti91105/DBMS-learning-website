@@ -1,0 +1,6 @@
+mysql> ALTER TABLE student
+    -> ADD CONSTRAINT fk_department
+    -> FOREIGN KEY (department_id)
+    -> REFERENCES department(id);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0

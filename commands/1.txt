@@ -1,0 +1,5 @@
+
+mysql> CREATE DATABASE bca2ndyear4028;
+output:- Query OK, 1 row affected (0.01 sec)
+
+

@@ -1,0 +1,13 @@
+mysql> SELECT E.emp_name AS Employee, M.emp_name AS Manager
+    -> FROM employee E
+    -> LEFT JOIN employee M
+    -> ON E.manager_id = M.emp_id;
++----------+----------+
+| Employee | Manager  |
++----------+----------+
+| Alice    | NULL     |
+| Bob      | Alice    |
+| Charlie  | Alice    |
+| David    | Bob      |
++----------+----------+
+4 rows in set (0.00 sec)

@@ -1,0 +1,14 @@
+mysql> SELECT name, marks
+    -> FROM student
+    -> WHERE marks > (
+    ->     SELECT AVG(marks)
+    ->     FROM student
+    -> );
++--------+-------+
+| name   | marks |
++--------+-------+
+| Riya   |    85 |
+| Aman   |    90 |
+| Sneha  |    88 |
++--------+-------+
+3 rows in set (0.00 sec)

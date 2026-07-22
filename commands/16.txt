@@ -1,0 +1,7 @@
+mysql> INSERT INTO student (id, name)
+    -> VALUES 
+    -> (6, 'Farah'),
+    -> (7, 'George'),
+    -> (8, 'Hannah');
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0

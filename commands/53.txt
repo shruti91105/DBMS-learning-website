@@ -1,0 +1,12 @@
+mysql> SELECT student.name, student.age, marks.subject, marks.marks
+    -> FROM student
+    -> INNER JOIN marks
+    -> ON student.student_id = marks.student_id;
++--------+-----+---------+-------+
+| name   | age | subject | marks |
++--------+-----+---------+-------+
+| Riya   |  18 | Math    |    85 |
+| Aman   |  20 | Science |    90 |
+| Sneha  |  19 | English |    88 |
++--------+-----+---------+-------+
+3 rows in set (0.00 sec)

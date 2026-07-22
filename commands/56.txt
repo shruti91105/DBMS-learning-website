@@ -1,0 +1,18 @@
+mysql> SELECT student.name, student.age, marks.subject, marks.marks
+    -> FROM student
+    -> LEFT JOIN marks
+    -> ON student.student_id = marks.student_id
+    -> UNION
+    -> SELECT student.name, student.age, marks.subject, marks.marks
+    -> FROM student
+    -> RIGHT JOIN marks
+    -> ON student.student_id = marks.student_id;
++--------+------+----------+-------+
+| name   | age  | subject  | marks |
++--------+------+----------+-------+
+| Riya   |   18 | NULL     |  NULL |
+| Aman   |   20 | Science  |    90 |
+| Sneha  |   19 | English  |    88 |
+| NULL   | NULL | History  |    75 |
++--------+------+----------+-------+
+4 rows in set (0.00 sec)

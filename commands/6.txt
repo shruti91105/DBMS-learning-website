@@ -1,0 +1,7 @@
+mysql> CREATE TABLE student (
+    -> id INT PRIMARY KEY,
+    -> name VARCHAR(100),
+    -> age INT,
+    -> department VARCHAR(50)
+    -> );
+output:- Query OK, 0 rows affected (0.02 sec)

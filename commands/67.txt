@@ -1,0 +1,17 @@
+CREATE OR REPLACE PROCEDURE print_numbers_for
+IS
+BEGIN
+    FOR counter IN 1..5 LOOP
+        DBMS_OUTPUT.PUT_LINE('Number: ' || counter);
+    END LOOP;
+END;
+/
+BEGIN
+    print_numbers_for;
+END;
+/
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5

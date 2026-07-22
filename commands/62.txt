@@ -1,0 +1,8 @@
+CREATE OR REPLACE PROCEDURE check_result(p_marks IN NUMBER)
+IS
+BEGIN
+    IF p_marks >= 40 THEN
+        DBMS_OUTPUT.PUT_LINE('Result: Pass');
+    END IF;
+END;
+/

@@ -1,0 +1,2 @@
+UPDATE students_marks 
+SET age_in_years = TIMESTAMPDIFF(YEAR, dob, CURDATE());
